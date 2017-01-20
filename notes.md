@@ -9,11 +9,11 @@
 
 ### Stuff to research for CSS:
 - [ ] Adding stuff to every page (text, images)
-- [ ] Line breaks
+- [x] Line breaks (can use bottom border)
 - [ ]
 
 ### Stuff to research for HTML
-- [ ] Drop-down menus
+- [x] Drop-down menus
 
 ### Other
-- [ ] 
+- [ ]
