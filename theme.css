@@ -1,18 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
 body {
   background-color: #000000
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  color: #FFFFFF
+h1, h2, h3, h4, h5, h6 {
+  color: #FFFFFF;
+  font-family: 'Consolas';
+}
+
+p {
+  color: #FFFFFF;
+  font-family: 'Ubuntu';
+  font-size: 14;
 }
 
 a {
-  color: #00ff00
+  color: #FF0000
 }
 
 a:hover {
-  color: #1111FF
-}
-a:visited{
-  color: #11FFFF
+  color: #FFFFFF
 }
