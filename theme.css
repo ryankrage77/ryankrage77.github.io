@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 body {
-  background-color: #000000
+  background-color: #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,9 +16,11 @@ p {
 }
 
 a {
-  color: #FF0000
+  color: #FF0000;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #FFFFFF
+  color: #FFFFFF;
+  text-decoration: underline;
 }
