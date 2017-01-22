@@ -1,5 +1,14 @@
+html{
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #000000;
+  margin: 0 auto;
+  /*max-width: 23cm;
+  /*border: 1pt solid #FF0000;*/
+  /*padding: 1em;*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,8 +25,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Verdana';
   font-size: 12;
   text-align: center;
-  margin-left: 0%;
-  margin-right: 0%;
 }
 
 #main {
@@ -26,15 +33,30 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12;
   display: inline-block;
   width: 50%;
-  margin-left: 5%;
+  margin-left: 5%
 }
 
 #side{
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: red;
   color: #FFFFFF;
   font-family: 'Verdana';
   font-size: 12;
-  display: inline-block;
-  margin-left: 10px;
+  float: right;
+  margin-right: 5%;
+  padding-left: 10px;
+}
+
+#footer{
+  color: #FFFFFF;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid red;
 }
 
 a {
