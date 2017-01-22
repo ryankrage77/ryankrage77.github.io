@@ -20,24 +20,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 0%;
 }
 
-.main {
+#main {
   color: #FFFFFF;
   font-family: 'Verdana';
   font-size: 12;
-  /*margin-left: 5%;
-  margin-right: 30%
-looks like content and sidebar need to be inside another class to go side by side.
-need to map out website with boxes
-  */
+  display: inline-block;
   width: 75%;
 }
 
-.side{
-  width: 25%;
+#side{
+  /*width: 25%;*/
   color: #FFFFFF;
   font-family: 'Verdana';
   font-size: 12;
-  float: left;
+  display: inline-block;
 }
 
 a {
