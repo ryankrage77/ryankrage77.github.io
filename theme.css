@@ -4,6 +4,7 @@ body {
    padding:0;
    height:100%;
    background-color: #000;
+   font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,20 +36,20 @@ a {
 }
 
 #body {
-   padding:10px;
-   padding-bottom:130px;   /* Height of the footer */
-   margin-left: 25%;
-   max-width: 50%;
+   /*padding:10px;*/
+   padding-bottom:140px;   /* Height of the footer */
+   margin-left: 20%;
+   max-width: 60%;
    color: #FFF;
    font-family: 'Verdana';
-   font-size: 15px;
+   font-size: 1em;
 }
 
 #footer {
    position:absolute;
    bottom:0;
    width:100%;
-   height:130px;   /* Height of the footer */
+   height: 140px;   /* Height of the footer */
    text-align: center;
    color: #FFF;
 }
