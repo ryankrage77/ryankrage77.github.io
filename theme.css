@@ -36,7 +36,7 @@ a {
 
 #body {
    padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
+   padding-bottom:130px;   /* Height of the footer */
    margin-left: 25%;
    max-width: 50%;
    color: #FFF;
@@ -48,7 +48,7 @@ a {
    position:absolute;
    bottom:0;
    width:100%;
-   height:60px;   /* Height of the footer */
+   height:130px;   /* Height of the footer */
    text-align: center;
    color: #FFF;
 }
