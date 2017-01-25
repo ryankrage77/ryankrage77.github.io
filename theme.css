@@ -14,6 +14,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+a:visited {
+  color: #C0C0C0;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
 a {
   color: #F00;
   text-decoration: none;
