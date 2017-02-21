@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    background-color: #002B36;
+    font-family: "Ubuntu";
+    max-width: 600px;
+    margin-left: 50px;
+}
+
+h1 {
+  color: #00FFFF;
+  text-align: center;
+  font-size: 180%;
+}
+p {
+  color: #00959A;
+  font-size: 100%;
+}
