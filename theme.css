@@ -16,3 +16,17 @@ p {
   color: #00959A;
   font-size: 100%;
 }
+
+a {
+   text-decoration: underline;
+   color: #007F86
+
+}
+
+a:visited {
+  color: #00555E;
+}
+
+a:hover {
+
+}
