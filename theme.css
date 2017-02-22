@@ -13,13 +13,13 @@ h1 {
   font-size: 180%;
 }
 p {
-  color: #00959A;
+  color: #007F86;
   font-size: 100%;
 }
 
 a {
    text-decoration: underline;
-   color: #007F86
+   color: #00959A
 
 }
 
@@ -28,5 +28,5 @@ a:visited {
 }
 
 a:hover {
-
+  color: #00FFFF;
 }
