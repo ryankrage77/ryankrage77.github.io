@@ -4,6 +4,7 @@
 		<meta charset="UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="theme.css"/>
 		<title>New Tab</title>
+		<!--Clock script-->
 		<script>
 			function startTime() {
     		var today = new Date();
@@ -21,16 +22,6 @@
     		return i;
 				}
 		</script>
-		<script>
-			$('#dynamic-select').bind('change', function() { // bind change event to select
-  		var url = $(this).val(); // get selected value
-  		if (url != '') { // require a URL
-    		window.location = url; // redirect
-  		}
-  		return false;
-			});
-			</script>
-
   </head>
 
 	<body onload="startTime()">
@@ -55,12 +46,6 @@
 		</form>
 		<!--Wolfram Alpha Widget-->
 		<script id="WolframAlphaScript" src="//www.wolframalpha.com/input/embed/?type=largeannot" type="text/javascript"></script>
-		<!--Bookmark search-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<select id="dynamic-select">
-  		<option value="">Bookmarks</option>
-  		<option value="//www.google.co.uk">Google</option>
-  		<option value="//www.bing.com">Bing</option>
-		</select>
+		<!--Bookmark search NOT YET IMPLEMENTED-->
 	</body>
 </html>
