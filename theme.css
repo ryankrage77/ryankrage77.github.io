@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
 body {
     background-color: #FFF;
-    font-family: "Ubuntu";
+    font-family: "Consolas";
     max-width: 50%;
     margin-left: 25%;
 }
