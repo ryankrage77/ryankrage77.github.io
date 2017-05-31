@@ -1,65 +1,32 @@
-html,
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 body {
-   margin:0;
-   padding:0;
-   height:100%;
-   background-color: #000;
-   font-size: 16px;
+    background-color: #002B36;
+    font-family: "Ubuntu";
+    max-width: 50%;
+    margin-left: 25%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #FFFFFF;
-  font-family: 'Consolas';
-  style: bold;
+h1 {
+  color: #00FFFF;
   text-align: center;
+  font-size: 180%;
 }
-
-a:visited {
-  color: #C0C0C0;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #FFF;
-  text-decoration: underline;
+p {
+  color: #007F86;
+  font-size: 100%;
 }
 
 a {
-  color: #F00;
-  text-decoration: none;
+   text-decoration: underline;
+   color: #00959A
+
 }
 
-#menu{
-  text-align: center;
-  color: #FFF;
-  font-family: 'Verdana';
+a:visited {
+  color: #00555E;
 }
 
-#container {
-   min-height:100%;
-   position:relative;
-}
-
-#header {
-   background:#000;
-   text-align: center;
-}
-
-#body {
-   /*padding:10px;*/
-   padding-bottom:140px;   /* Height of the footer */
-   margin-left: 20%;
-   max-width: 60%;
-   color: #FFF;
-   font-family: 'Verdana';
-   font-size: 1em;
-}
-
-#footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height: 140px;   /* Height of the footer */
-   text-align: center;
-   color: #FFF;
+a:hover {
+  color: #00FFFF;
 }
