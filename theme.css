@@ -23,10 +23,10 @@ a {
 }
 
 a:visited {
-  text-decoration: underline;
   color: #663366;
 }
 
 a:hover {
-  color: #00FFFF;
+  text-decoration: underline;
+  color: #0645AD;
 }
