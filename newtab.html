@@ -21,6 +21,17 @@
     		return i;
 				}
 		</script>
+		<script>
+			$('#dynamic-select').bind('change', function() { // bind change event to select
+  		var url = $(this).val(); // get selected value
+  		if (url != '') { // require a URL
+    		window.location = url; // redirect
+  		}
+  		return false;
+			});
+			</script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
   </head>
 
 	<body onload="startTime()">
@@ -29,7 +40,7 @@
 		<div align="center" style="font-size:150%" id="txt"></div>
 		<!--Google search-->
 		<form method="get" action="http://www.google.com/search">
-			<input type="text" name="q" maxlength="255" value="" autofocus/>
+			<input type="text" name="q" maxlength="255" value="" autofocus />
 			<input type="submit" value="Google" />
 		</form>
 		<!--Youtube search-->
@@ -44,5 +55,11 @@
 			<input type="submit" name="go" value="Wikipedia" />
 		</form>
 		<script id="WolframAlphaScript" src="//www.wolframalpha.com/input/embed/?type=largeannot" type="text/javascript"></script>
+
+		<select id="dynamic-select">
+  		<option value="">Bookmarks</option>
+  		<option value="//www.google.co.uk">Google</option>
+  		<option value="//www.bing.com">Bing</option>
+		</select>
 	</body>
 </html>
