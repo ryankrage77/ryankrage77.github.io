@@ -22,6 +22,13 @@
     		return i;
 				}
 		</script>
+		<script>
+			function bookmark() {
+		  	var x = document.forms.bookmarksearch.bookmark.value;
+		    window.location = x;
+			}
+		 </script>
+
   </head>
 
 	<body onload="startTime()">
@@ -46,6 +53,15 @@
 		</form>
 		<!--Wolfram Alpha Widget-->
 		<script id="WolframAlphaScript" src="//www.wolframalpha.com/input/embed/?type=largeannot" type="text/javascript"></script>
-		<!--Bookmark search NOT YET IMPLEMENTED-->
+		<!--Bookmark search-->
+		<form id="bookmarksearch" action="javascript:bookmark()" method="get">
+      <input list="bookmarks" name="bookmark">
+      <datalist id="bookmarks">
+        <option value="https://www.google.co.uk">Google</option>
+        <option value="https://m.xkcd.com">XKCD</option>
+        <option value="https://ryankrage77.github.io">ryankrage77</option>
+      </datalist>
+      <input type="submit">
+    </form>
 	</body>
 </html>
