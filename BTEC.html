@@ -17,7 +17,7 @@
 				var hoursLeft = 24-h;
 				var minutesLeft = (60-m)-1;
 				var secondsLeft = 60-s;
-				document.getElementById('txt').innerHTML = daysLeft + " day/s, " + hoursLeft + " hour/s, " + minutesLeft + " minute/s, " + secondsLeft + " second/s left.\n\nDo " + Number((assignments/daysLeft).toFixed(1)) + " Assignments per day to be done by the " + due + "th.";
+				document.getElementById('txt').innerHTML = daysLeft + " day/s, " + hoursLeft + " hour/s, " + minutesLeft + " minute/s, " + secondsLeft + " second/s left.\n\nDo " + Number((assignments/daysLeft).toFixed(1)) + " assignments per day to be done by the " + due + "th.";
 				var t = setTimeout(BTECprogress, 500);
 			}
 		</script>
