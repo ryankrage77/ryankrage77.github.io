@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="theme.css"/>
+		<title>BTEC</title>
+		<script>
+			function BTECprogress() {
+				var today = new Date();
+				var day = today.getDate();
+				var due = 20;
+				var time = (due-day);
+				var assignments = prompt("How many Assignments do you have left?");
+				document.getElementById('txt').innerHTML = time + " Days left. Do " + Number((assignments/time).toFixed(1)) + " Assignments per day to be done by the 20th.";
+			}
+		</script>
+  </head>
+
+	<body onload="BTECprogress()">
+		<h1 align="center">BTEC Progress</h1>
+		<!--Clock-->
+		<div align="center" style="font-size:150%" id="txt"></div>
+	</form>
+	</body>
+</html>
