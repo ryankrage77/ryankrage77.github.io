@@ -8,10 +8,10 @@
 			function BTECprogress() {
 				var today = new Date();
 				var day = today.getDate();
-				var due = 20;
+				var assignments = prompt("How many BTEC assignments do you have left?");
+				var due = prompt("What date would you like to be done by?", "20");
 				var time = (due-day);
-				var assignments = prompt("How many Assignments do you have left?");
-				document.getElementById('txt').innerHTML = time + " Days left. Do " + Number((assignments/time).toFixed(1)) + " Assignments per day to be done by the 20th.";
+				document.getElementById('txt').innerHTML = time + " Days left. Do " + Number((assignments/time).toFixed(1)) + " Assignments per day to be done by the " + due + "th.";
 			}
 		</script>
   </head>
