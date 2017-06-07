@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="theme.css"/>
 		<title>BTEC</title>
 		<script>
-			var assignments = prompt("How many BTEC assignments do you have left?");
+			var assignments = prompt("How many BTEC assignments do you have left?", "2");
 			var due = prompt("What date would you like to be done by?", "20");
 			function BTECprogress() {
 				var today = new Date();
@@ -13,7 +13,7 @@
 				var m = today.getMinutes();
 				var s = today.getSeconds();
 				var day = today.getDate();
-				var daysLeft = (due-day);
+				var daysLeft = (due-day)-1;
 				var hoursLeft = 24-h;
 				var minutesLeft = (60-m)-1;
 				var secondsLeft = 60-s;
