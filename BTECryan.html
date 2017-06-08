@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="theme.css"/>
+		<title>BTEC Ryan</title>
+		<script>
+			function BTECprogress() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				var day = today.getDate();
+				var daysLeft = (16-day);
+				var hoursLeft = 24-h;
+				var minutesLeft = (60-m)-1;
+				var secondsLeft = (60-s)-1;
+				var totalSecondsLeft = (daysLeft*86400) + (minutesLeft*60) + (secondsLeft);
+				var timeLeft = daysLeft*21600;
+				document.getElementById('txt').innerHTML = totalSecondsLeft + " seconds to write 31000 words. If you work 6 hours per day, that's " + Number((31000/timeLeft).toFixed(1)) + " words per second.";
+				var t = setTimeout(BTECprogress, 500);
+			}
+		</script>
+  </head>
+
+	<body onload="BTECprogress()">
+		<p><a href="/">Home</a><p>
+		<h1 align="center">BTEC Progress</h1>
+		<div align="center" style="font-size:120%" id="txt"></div>
+	</form>
+	</body>
+</html>
