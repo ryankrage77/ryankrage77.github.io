@@ -18,7 +18,7 @@
 				var secondsLeft = (60-s)-1;
 				var totalSecondsLeft = (daysLeft*86400) + (minutesLeft*60) + (secondsLeft);
 				var words = 6000;
-				document.getElementById('txt').innerHTML = "To finish in the next six hours, write's " + Number((words/((totalSecondsLeft)/4)).toFixed(1)) + " words per second, or " + Number((words/(((totalSecondsLeft)/4)/60)).toFixed(1)) + " per minute, or " + Number((words/((((totalSecondsLeft)/4)/60)/60)).toFixed(1)) + " per hour. That's " + Number(((words/((((totalSecondsLeft)/4)/60)/60))*6).toFixed(1)) + " words in six hours. " + totalSecondsLeft + " seconds remaining to write " +  words + " words. ;
+				document.getElementById('txt').innerHTML = "To finish in the next six hours, write's " + Number((words/((totalSecondsLeft)/4)).toFixed(1)) + " words per second, or " + Number((words/(((totalSecondsLeft)/4)/60)).toFixed(1)) + " per minute, or " + Number((words/((((totalSecondsLeft)/4)/60)/60)).toFixed(1)) + " per hour. That's " + Number(((words/((((totalSecondsLeft)/4)/60)/60))*6).toFixed(1)) + " words in six hours. " + totalSecondsLeft + " seconds remaining to write " +  words + " words.";
 				var t = setTimeout(BTECprogress, 500);
 			}
 		</script>
