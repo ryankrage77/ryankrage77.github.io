@@ -17,7 +17,7 @@
 				var minutesLeft = (60-m)-1;
 				var secondsLeft = (60-s)-1;
 				var totalSecondsLeft = (daysLeft*86400) + (minutesLeft*60) + (secondsLeft);
-				var words = 6500;
+				var words = 6000;
 				document.getElementById('txt').innerHTML = totalSecondsLeft + " seconds to write " +  words + " words. If you work 6 hours per day, that's " + Number((words/((totalSecondsLeft)/4)).toFixed(1)) + " words per second, " + Number((words/(((totalSecondsLeft)/4)/60)).toFixed(1)) + " per minute, or " + Number((words/((((totalSecondsLeft)/4)/60)/60)).toFixed(1)) + " per hour. That makes a total of " + Number(((words/((((totalSecondsLeft)/4)/60)/60))*6).toFixed(1)) + " per day.";
 				var t = setTimeout(BTECprogress, 500);
 			}
