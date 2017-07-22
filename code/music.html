@@ -8,8 +8,87 @@
 		<h1>Music Generator</h1>
 		<p><a href="index">Code</a> - <a href="../">Home</a>
 			<p>A simple python program that creates a little tune with bleeps and bloops<br>It doesn't really follow music theory, but I'm working on that.</p>
-			<!--The worst formatting I've ever had to endure-->
-			<pre><br>import winsound<br>import random<br><br>#A list of notes<br>#         A  Bb   B   C  Db   D  Eb   E   F  Gb   G  Ab<br>notes = [440,466,493,523,554,587,622,659,698,739,783,830]<br><br>#each note has an array with other notes that can be chosen next.<br>#Some notes appear more than once to adjust the probabilities.<br>A = [659,659,659,587,587,830]<br>Bb= [698,698,622]<br>B = [587,587,587,659,659,440]<br>C = [587,587,587,587,783,783,783,440,440,493,466,698]<br>Db= [830,830]<br>D = [440,659]<br>Eb= [466,830]<br>E = [440,587]<br>F = [783,783,783,783,440,440,440,659,659,587]<br>Gb= [554,493]<br>G = [587,587,440,440,659]<br>Ab= [554,554,554,554,440,440,440,783,783,587]<br><br>#a list of note durations<br>times = [150,150,150,300,300,600]<br><br>#an array for the notes and one for the times<br>notelist = []<br>timelist = []<br><br>#create a tune - an array for the notes and one for times<br>x = 1<br>newnote = notes[random.randint(0,10)]<br>notelist.append(newnote)<br>timelist.append( times[ random.randint( 0,len(times) - 1 ) ] )<br>while x < 8:<br>    if newnote == 440:<br>    newnote = A[random.randint(0,len(A)-1)]<br>    elif newnote == 466:<br>        newnote = Bb[random.randint(0,len(Bb)-1)]<br>    elif newnote == 493:<br>        newnote = B[random.randint(0,len(B)-1)]<br>    elif newnote == 523:<br>        newnote = C[random.randint(0,len(C)-1)]<br>    elif newnote == 554:<br>        newnote = Db[random.randint(0,len(Db)-1)]<br>    elif newnote == 587:<br>        newnote = D[random.randint(0,len(D)-1)]<br>    elif newnote == 622:<br>        newnote = Eb[random.randint(0,len(Eb)-1)]<br>    elif newnote == 659:<br>        newnote = E[random.randint(0,len(E)-1)]<br>    elif newnote == 698:<br>        newnote = F[random.randint(0,len(F)-1)]<br>    elif newnote == 739:<br>        newnote = Gb[random.randint(0,len(Gb)-1)]<br>    elif newnote == 783:<br>        newnote = G[random.randint(0,len(G)-1)]<br>    elif newnote == 830:<br>        newnote = Ab[random.randint(0,len(Ab)-1)]<br>    notelist.append(newnote)<br>    timelist.append(times[random.randint(0,len(times) - 1)])<br>    x = x + 1<br><br>#show the notes and times<br>print(notelist)<br>print(timelist)<br><br>#play the tune! Forever!<br>a = 0<br>b = 1<br>while True:<br>    if a < 8:<br>        print(notelist[a],timelist[a])<br>        winsound.Beep(notelist[a], timelist[a])<br>    a += 1<br>    else:<br>        a = 1<br>        b += 1<br>        print("bar", b)</pre>
-			<!--Thank god that's over-->
+            <div style="background: #f0f3f3; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">winsound</span>
+<span style="color: #006699; font-weight: bold">import</span> <span style="color: #00CCFF; font-weight: bold">random</span>
+
+<span style="color: #0099FF; font-style: italic"># A list of notes</span>
+<span style="color: #0099FF; font-style: italic">#         A  Bb   B   C  Db   D  Eb   E   F  Gb   G  Ab</span>
+notes <span style="color: #555555">=</span> [<span style="color: #FF6600">440</span>,<span style="color: #FF6600">466</span>,<span style="color: #FF6600">493</span>,<span style="color: #FF6600">523</span>,<span style="color: #FF6600">554</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">622</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">698</span>,<span style="color: #FF6600">739</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">830</span>]
+
+<span style="color: #0099FF; font-style: italic"># Each note has an array with other notes that can be chosen next.</span>
+<span style="color: #0099FF; font-style: italic"># Some notes appear more than once to adjust the probabilities.</span>
+A <span style="color: #555555">=</span> [<span style="color: #FF6600">659</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">830</span>]
+Bb<span style="color: #555555">=</span> [<span style="color: #FF6600">698</span>,<span style="color: #FF6600">698</span>,<span style="color: #FF6600">622</span>]
+B <span style="color: #555555">=</span> [<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">440</span>]
+C <span style="color: #555555">=</span> [<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">493</span>,<span style="color: #FF6600">466</span>,<span style="color: #FF6600">698</span>]
+Db<span style="color: #555555">=</span> [<span style="color: #FF6600">830</span>,<span style="color: #FF6600">830</span>]
+D <span style="color: #555555">=</span> [<span style="color: #FF6600">440</span>,<span style="color: #FF6600">659</span>]
+Eb<span style="color: #555555">=</span> [<span style="color: #FF6600">466</span>,<span style="color: #FF6600">830</span>]
+E <span style="color: #555555">=</span> [<span style="color: #FF6600">440</span>,<span style="color: #FF6600">587</span>]
+F <span style="color: #555555">=</span> [<span style="color: #FF6600">783</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">659</span>,<span style="color: #FF6600">587</span>]
+Gb<span style="color: #555555">=</span> [<span style="color: #FF6600">554</span>,<span style="color: #FF6600">493</span>]
+G <span style="color: #555555">=</span> [<span style="color: #FF6600">587</span>,<span style="color: #FF6600">587</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">659</span>]
+Ab<span style="color: #555555">=</span> [<span style="color: #FF6600">554</span>,<span style="color: #FF6600">554</span>,<span style="color: #FF6600">554</span>,<span style="color: #FF6600">554</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">440</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">783</span>,<span style="color: #FF6600">587</span>]
+
+<span style="color: #0099FF; font-style: italic"># A list of note durations</span>
+times <span style="color: #555555">=</span> [<span style="color: #FF6600">150</span>,<span style="color: #FF6600">150</span>,<span style="color: #FF6600">150</span>,<span style="color: #FF6600">300</span>,<span style="color: #FF6600">300</span>,<span style="color: #FF6600">600</span>]
+
+<span style="color: #0099FF; font-style: italic"># An array for the notes and one for the times</span>
+notelist <span style="color: #555555">=</span> []
+timelist <span style="color: #555555">=</span> []
+
+<span style="color: #0099FF; font-style: italic"># Create a tune - an array for the notes and one for times</span>
+x <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+newnote <span style="color: #555555">=</span> notes[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #FF6600">10</span>)]
+notelist<span style="color: #555555">.</span>append(newnote)
+timelist<span style="color: #555555">.</span>append( times[ random<span style="color: #555555">.</span>randint( <span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(times) <span style="color: #555555">-</span> <span style="color: #FF6600">1</span> ) ] )
+<span style="color: #006699; font-weight: bold">while</span> x <span style="color: #555555">&lt;</span> <span style="color: #FF6600">8</span>:
+  <span style="color: #006699; font-weight: bold">if</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">440</span>:
+    newnote <span style="color: #555555">=</span> A[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(A)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">466</span>:
+    newnote <span style="color: #555555">=</span> Bb[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(Bb)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">493</span>:
+    newnote <span style="color: #555555">=</span> B[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(B)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">523</span>:
+    newnote <span style="color: #555555">=</span> C[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(C)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">554</span>:
+    newnote <span style="color: #555555">=</span> Db[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(Db)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">587</span>:
+    newnote <span style="color: #555555">=</span> D[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(D)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">622</span>:
+    newnote <span style="color: #555555">=</span> Eb[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(Eb)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">659</span>:
+    newnote <span style="color: #555555">=</span> E[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(E)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">698</span>:
+   newnote <span style="color: #555555">=</span> F[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(F)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">739</span>:
+    newnote <span style="color: #555555">=</span> Gb[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(Gb)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">783</span>:
+    newnote <span style="color: #555555">=</span> G[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(G)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  <span style="color: #006699; font-weight: bold">elif</span> newnote <span style="color: #555555">==</span> <span style="color: #FF6600">830</span>:
+    newnote <span style="color: #555555">=</span> Ab[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(Ab)<span style="color: #555555">-</span><span style="color: #FF6600">1</span>)]
+  notelist<span style="color: #555555">.</span>append(newnote)
+  timelist<span style="color: #555555">.</span>append(times[random<span style="color: #555555">.</span>randint(<span style="color: #FF6600">0</span>,<span style="color: #336666">len</span>(times) <span style="color: #555555">-</span> <span style="color: #FF6600">1</span>)])
+  x <span style="color: #555555">=</span> x <span style="color: #555555">+</span> <span style="color: #FF6600">1</span>
+
+<span style="color: #0099FF; font-style: italic"># Show the notes and times</span>
+<span style="color: #006699; font-weight: bold">print</span>(notelist)
+<span style="color: #006699; font-weight: bold">print</span>(timelist)
+
+<span style="color: #0099FF; font-style: italic"># Play the tune! Forever!</span>
+a <span style="color: #555555">=</span> <span style="color: #FF6600">0</span>
+b <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+<span style="color: #006699; font-weight: bold">while</span> <span style="color: #336666">True</span>:
+  <span style="color: #006699; font-weight: bold">if</span> a <span style="color: #555555">&lt;</span> <span style="color: #FF6600">8</span>:
+    <span style="color: #006699; font-weight: bold">print</span>(notelist[a],timelist[a])
+    winsound<span style="color: #555555">.</span>Beep(notelist[a], timelist[a])
+    a <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
+  <span style="color: #006699; font-weight: bold">else</span>:
+    a <span style="color: #555555">=</span> <span style="color: #FF6600">1</span>
+    b <span style="color: #555555">+=</span> <span style="color: #FF6600">1</span>
+    <span style="color: #006699; font-weight: bold">print</span>(<span style="color: #CC3300">&quot;bar&quot;</span>, b)
+</pre></div>
+            <p> The following is the code implemented. Sadly it will not run, as it requires the <b>winsound</b> module, which <a>trinket.io</a> does not support.</p>
+            <iframe src="https://trinket.io/embed/python/6843abcf6d?toggleCode=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 	</body>
 </html>
