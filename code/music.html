@@ -68,21 +68,21 @@
 					notelist.append(newnote)<br>
 					timelist.append(times[random.randint(0,len(times) - 1)])<br>
 					x = x + 1<br><br>
-					# Show the notes and times<br>
-					print(notelist)<br>
-					print(timelist)<br><br>
-					# Play the tune! Forever!<br>
-					a = 0<br>
-					b = 1<br>
-					while True:<br>
-						if a < 8:<br>
-							print(notelist[a],timelist[a])<br>
-							winsound.Beep(notelist[a], timelist[a])<br>
-							a += 1<br>
-						else:<br>
-							a = 1<br>
-							b += 1<br>
-							print("bar", b)
+				# Show the notes and times<br>
+				print(notelist)<br>
+				print(timelist)<br><br>
+				# Play the tune! Forever!<br>
+				a = 0<br>
+				b = 1<br>
+				while True:<br>
+					if a < 8:<br>
+						print(notelist[a],timelist[a])<br>
+						winsound.Beep(notelist[a], timelist[a])<br>
+						a += 1<br>
+					else:<br>
+						a = 1<br>
+						b += 1<br>
+						print("bar", b)
 			</pre>
 			<!--Thank god that's over-->
 	</body>
