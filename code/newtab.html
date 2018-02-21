@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="theme.css"/>
+		<title>New Tab</title>
+		<!--Clock script-->
+		<script>
+			function startTime() {
+    		var today = new Date();
+    		var h = today.getHours();
+    		var m = today.getMinutes();
+    		var s = today.getSeconds();
+    		m = checkTime(m);
+    		s = checkTime(s);
+    		document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+    		var t = setTimeout(startTime, 500);
+				}
+			function checkTime(i) {
+    		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    		return i;
+				}
+		</script>
+		<script>
+			function bookmark() {
+		  	var x = document.forms.bookmarksearch.bookmark.value;
+		    window.location = x;
+			}
+		 </script>
+
+  </head>
+
+	<body onload="startTime()">
+		<h1 align="center">New Tab</h1>
+		<!--Clock-->
+		<div align="center" style="font-size:150%" id="txt"></div>
+		<div align="center" id="forms">
+			<!--Google search-->
+			<form method="get" action="http://www.google.com/search">
+				<input type="text" name="q" maxlength="255" value="" autofocus />
+				<input type="submit" value="Google" />
+			</form>
+			<!--Youtube search-->
+			<form id="vb_yt_search-form" action="http://www.youtube.com/results" method="get">
+				<input id="vb_yt_search-term" name="search_query" type="text" maxlength="128" />
+				<input type="submit" value="YouTube" />
+			</form>
+			<!--wikipedia search-->
+			<form action="http://www.wikipedia.org/search-redirect.php" method="get">
+				<input type="hidden" name="language" value="en" />
+				<input type="text" name="search"/>
+				<input type="submit" name="go" value="Wikipedia" />
+			</form>
+			<!--Wolfram Alpha Widget
+			<script id="WolframAlphaScript" src="//www.wolframalpha.com/input/embed/?type=largeannot" type="text/javascript"></script>-->
+			<!--Bookmark search-->
+			<form id="bookmarksearch" action="javascript:bookmark()" method="get">
+      			<input list="bookmarks" name="bookmark">
+      			<datalist id="bookmarks">
+        			<option value="https://www.google.co.uk">Google</option>
+        			<option value="https://m.xkcd.com">XKCD</option>
+        			<option value="https://ryankrage77.github.io">ryankrage77</option>
+      			</datalist>
+      			<input type="Submit" value="Go to bookmark">
+    		</form>
+    	</div>
+	</body>
+</html>
