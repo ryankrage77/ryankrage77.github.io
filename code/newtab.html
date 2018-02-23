@@ -35,33 +35,35 @@
 		<h1 align="center">New Tab</h1>
 		<!--Clock-->
 		<div align="center" style="font-size:150%" id="txt"></div>
-		<!--Google search-->
-		<form method="get" action="http://www.google.com/search">
-			<input type="text" name="q" maxlength="255" value="" autofocus />
-			<input type="submit" value="Google" />
-		</form>
-		<!--Youtube search-->
-		<form id="vb_yt_search-form" action="http://www.youtube.com/results" method="get">
+		<div align="center" id="forms">
+			<!--Google search-->
+			<form method="get" action="http://www.google.com/search">
+				<input type="text" name="q" maxlength="255" value="" autofocus />
+				<input type="submit" value="Google" />
+			</form>
+			<!--Youtube search-->
+			<form id="vb_yt_search-form" action="http://www.youtube.com/results" method="get">
 				<input id="vb_yt_search-term" name="search_query" type="text" maxlength="128" />
 				<input type="submit" value="YouTube" />
-		</form>
-		<!--wikipedia search-->
-		<form action="http://www.wikipedia.org/search-redirect.php" method="get">
-			<input type="hidden" name="language" value="en" />
-			<input type="text" name="search"/>
-			<input type="submit" name="go" value="Wikipedia" />
-		</form>
-		<!--Wolfram Alpha Widget
-		<script id="WolframAlphaScript" src="//www.wolframalpha.com/input/embed/?type=largeannot" type="text/javascript"></script>-->
-		<!--Bookmark search-->
-		<form id="bookmarksearch" action="javascript:bookmark()" method="get">
-      <input list="bookmarks" name="bookmark">
-      <datalist id="bookmarks">
-        <option value="https://www.google.co.uk">Google</option>
-        <option value="https://m.xkcd.com">XKCD</option>
-        <option value="https://ryankrage77.github.io">ryankrage77</option>
-      </datalist>
-      <input type="Submit" value="Go to bookmark">
-    </form>
+			</form>
+			<!--wikipedia search-->
+			<form action="http://www.wikipedia.org/search-redirect.php" method="get">
+				<input type="hidden" name="language" value="en" />
+				<input type="text" name="search"/>
+				<input type="submit" name="go" value="Wikipedia" />
+			</form>
+			<!--Wolfram Alpha Widget
+			<script id="WolframAlphaScript" src="//www.wolframalpha.com/input/embed/?type=largeannot" type="text/javascript"></script>-->
+			<!--Bookmark search-->
+			<form id="bookmarksearch" action="javascript:bookmark()" method="get">
+      			<input list="bookmarks" name="bookmark">
+      			<datalist id="bookmarks">
+        			<option value="https://www.google.co.uk">Google</option>
+        			<option value="https://m.xkcd.com">XKCD</option>
+        			<option value="https://ryankrage77.github.io">ryankrage77</option>
+      			</datalist>
+      			<input type="Submit" value="Go to bookmark">
+    		</form>
+    	</div>
 	</body>
 </html>
